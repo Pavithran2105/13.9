@@ -34,7 +34,7 @@ function checkAll(allInput){
 
 form.addEventListener( 'submit', function (e){
     e.preventDefault();
-    checkAll(allInput[userName,gmail,password,password2]);
+    checkAll([userName,gmail,password,password2]);
 })
 
     
