@@ -5,14 +5,18 @@ var password2 = document.getElementById("password2");
 var form = document.getElementById("form");
 
 function showError(input){
-    const formControl = input;
-    // formControl.classList.add("failure");
-    formControl.className = "failure"; 
+    const form_Control = input.parentElement;
+    form_Control.className = "formContainer failure";
+    const message=input.id+" is required";
+    const errorElem=form_Control.querySelector("small");
+    errorElem.innerText=message;
 
 }
 function showSuccess(input){
-    const formControl = input;
-    formControl.className = "success"
+    const form_Control = input.parentElement;
+    form_Control.className = "formContainer success"
+    const errorElem=form_Control.querySelector("small");
+    errorElem.innerText="";
 
 }
 
@@ -38,6 +42,5 @@ form.addEventListener( 'submit', function (e){
 })
 
     
-
 
 
